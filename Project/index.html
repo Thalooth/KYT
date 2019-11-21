@@ -1,0 +1,98 @@
+<html>
+<head>
+  <title>KYT</title>
+  <meta name="description" content="KYT provides free service of grading your brain tumor based on your uploaded images." />
+  <meta name="keywords" content="brain tumor, grades, free, image, scan, precise, level" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Know your <span class="logo_colour">TUMOR</span></a></h1>
+          <h2>We can help you.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="examples.html">Causes and Symptoms</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="banner"></div>
+	  <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            <h3>Latest News</h3>
+            <a href="https://www.medicalnewstoday.com/articles/326635.php"><h4>New blood test detects brain tumors with 87% accuracy</h4></a>
+            <h5>October 11th, 2019</h5>
+            <p>Largely, the poor outlook is due to the fact that brain tumors have very nonspecific symptoms, which makes them more difficult to distinguish ...<br /><a href="https://www.google.com/search?rlz=1C1CHBF_enIN811IN811&sxsrf=ACYBGNSIVL7y9nkdJUJNkcyNSaRAhoRiFQ:1571239986915&q=brain+tumor+news&tbm=nws&source=univ&tbo=u&sa=X&ved=2ahUKEwiroJuKjaHlAhV373MBHWnhBtUQt8YBKAF6BAgDEBI">Read more</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="https://www.mayoclinic.org/diseases-conditions/brain-tumor/symptoms-causes/syc-20350084">Causes</a></li>
+              <li><a href="https://www.medicinenet.com/brain_tumor/article.htm">Signs and symptoms</a></li>
+              <li><a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/the-most-common-brain-tumor-5-things-you-should-know">Awareness and prevention</a></li>
+              <li><a href="https://www.ucsfhealth.org/conditions/brain_tumor/treatment.html">Treatment and surgery</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+              </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Brain Tumor and its grades</h1>
+        <p>A brain tumor is a collection, or mass, of abnormal cells in your brain. Your skull, which encloses your brain, is very rigid. Any growth inside such a restricted space can cause problems. Brain tumors can be cancerous (malignant) or noncancerous (benign). When benign or malignant tumors grow, they can cause the pressure inside your skull to increase. This can cause brain damage, and it can be life-threatening.</p>
+        <p>A staging system is used for most other types of tumors in other parts of the body, to describe where a tumor is located, if or where it has spread, and whether it is affecting other parts of the body. However, there is no recommended systemic staging system for adult brain tumors because most primary tumors do not usually spread beyond the central nervous system. The grading system described below is always used instead because the specific features of a brain tumor determine how cancerous it is and how likely it is to grow.</p>
+        <p>The grade is determined by its features, as seen under a microscope, according to the following criteria:</p>
+        <ul>
+        	<li>Grade I. These tumors are slow growing and unlikely to spread. They can often be cured with surgery.</li>
+        	<li>Grade II. These tumors are less likely to grow and spread but are more likely to come back after treatment.</li>
+        	<li>Grade III. These tumors are more likely to have rapidly dividing cells but no dead cells. They can grow quickly.</li>
+        	<li>Grade IV. In a grade IV tumor, cells in the tumor are actively dividing. In addition, the tumor has blood vessel growth and areas of dead tissue. These tumors can grow and spread quickly.</li>
+        </ul>
+        <p>KYT helps you  providing the grade of your tumor for free.</p>
+        <h2>Take the test</h2>  
+		<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+		<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+		<p><img id="output" width="200" /></p>
+
+		<script>
+		var loadFile = function(event) {
+		var image = document.getElementById('output');
+		image.src = URL.createObjectURL(event.target.files[0]);
+		};
+		</script>
+		<input type="submit" value="submit">
+		<div id="tumortrue">
+			<p>Scan completed. We are really sorry to inform you that tumor is<strong> positive</strong>. Refer our useful link sections for remedies.</p>
+		</div> 
+		<div id="tumorfalse">
+			<p>Scan completed. We are really glad to inform you that tumor is<strong> negetive</strong>. Refer our website for more information and prevention methods.</p>
+		</div> 
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">Causes and Symptoms</a> | <a href="contact.html">Contact Us</a></p>
+      <p>Feel free to check. Fear free to check.</p>
+    </div>
+  </div>
+</body>
+</html>
