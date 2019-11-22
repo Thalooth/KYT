@@ -1,0 +1,437 @@
+<html>
+<head>
+  <title>KYT</title>
+  <meta name="description" content="KYT provides free service of grading your brain tumor based on your uploaded images." />
+  <meta name="keywords" content="brain tumor, grades, free, image, scan, precise, level" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <style>
+    html
+{ height: 100%;}
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background: #FFF;
+  color: #555;}
+
+p
+{ padding: 0 0 20px 0;
+  line-height: 1.7em;}
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6 
+{ color: #E7746F;
+  letter-spacing: 0em;
+  padding: 0 0 5px 0;}
+
+h1, h2, h3
+{ font: normal 170% 'century gothic', arial;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;}
+
+h2
+{ font-size: 160%;
+  padding: 9px 0 5px 0;}
+
+h3
+{ font-size: 140%;
+  padding: 5px 0 0 0;}
+
+h4, h6
+{ color: #009FBC;
+  padding: 0 0 5px 0;
+  font: normal 110% arial;
+  text-transform: uppercase;}
+
+h5, h6
+{ color: #888;
+  font: normal 95% arial;
+  letter-spacing: normal;
+  padding: 0 0 15px 0;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: underline;
+  color: #009FBC;}
+
+a:hover
+{ text-decoration: none;}
+
+blockquote
+{ margin: 20px 0; 
+  padding: 10px 20px 0 20px;
+  border: 1px solid #E5E5DB;
+  background: #FFF;}
+
+ul
+{ margin: 2px 0 22px 17px;}
+
+ul li
+{ list-style-type: circle;
+  margin: 0 0 6px 0; 
+  padding: 0 0 4px 5px;
+  line-height: 1.5em;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+
+.left
+{ float: left;
+  width: auto;
+  margin-right: 10px;}
+
+.right
+{ float: right; 
+  width: auto;
+  margin-left: 10px;}
+
+.center
+{ display: block;
+  text-align: center;
+  margin: 20px auto;}
+
+#main, #logo, #menubar, #site_content, #footer
+{ margin-left: auto; 
+  margin-right: auto;}
+
+#header
+{ background: #1d1d1d url(pattern.png) repeat;
+  border-bottom: 2px solid #E7746F;
+  height: 177px;}
+  
+#banner
+{ background: transparent url(banner.jpg) no-repeat;
+  width: 870px;
+  height: 180px;
+  margin-bottom: 20px;
+  border: 5px solid #E7746F;}
+
+#logo
+{ width: 880px;
+  position: relative;
+  height: 140px;
+  background: transparent;}
+
+#logo #logo_text 
+{ position: absolute; 
+  top: 10px;
+  left: 0;}
+
+#logo h1, #logo h2
+{ font: normal 300% 'century gothic', arial, sans-serif;
+  border-bottom: 0;
+  text-transform: none;
+  margin: 0 0 0 9px;}
+
+#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover 
+{ padding: 22px 0 0 0;
+  color: #FFF;
+  letter-spacing: 0.1em;
+  text-decoration: none;}
+
+#logo_text h1 a .logo_colour
+{ color: #E7746F;}
+
+#logo_text a:hover .logo_colour
+{ color: #FFF;}
+
+#logo_text h2
+{ font-size: 120%;
+  padding: 4px 0 0 0;
+  color: #FFF;}
+
+#menubar
+{ width: 880px;
+  height: 46px;} 
+
+ul#menu
+{ float: right;
+  margin: 0;}
+
+ul#menu li
+{ float: left;
+  padding: 0 0 0 9px;
+  list-style: none;
+  margin: 1px 2px 0 0;
+  background: transparent;}
+
+ul#menu li a
+{ font: normal 100% 'trebuchet ms', sans-serif;
+  display: block; 
+  float: left; 
+  height: 20px;
+  padding: 6px 35px 5px 28px;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+  background: transparent;} 
+
+ul#menu li.selected a
+{ height: 20px;
+  padding: 6px 35px 5px 28px;}
+
+ul#menu li.selected
+{ margin: 1px 2px 0 0;
+  background: #E7746F;}
+
+ul#menu li.selected a, ul#menu li.selected a:hover
+{ background: #E7746F;
+  color: #FFF;}
+
+ul#menu li a:hover
+{ color: #FFF;
+  background: #E7746F;}
+
+#site_content
+{ width: 880px;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  padding: 0 0 10px 0;} 
+
+#sidebar_container
+{ float: right;
+  width: 224px;}
+
+.sidebar_top
+{ width: 222px;
+  height: 14px;
+  background: transparent url(side_top.png) no-repeat;}
+
+.sidebar_base
+{ width: 222px;
+  height: 14px;
+  background: url(side_base.png) no-repeat;}
+
+.sidebar
+{ float: right;
+  width: 222px;
+  padding: 0;
+  margin: 0 0 16px 0;}
+
+.sidebar_item
+{ background: url(side_back.png) repeat-y;
+  padding: 0 15px;
+  width: 192px;}
+
+.sidebar li a.selected
+{ color: #444;} 
+
+.sidebar ul
+{ margin: 0;} 
+
+#content
+{ text-align: left;
+  width: 620px;
+  padding: 0 0 0 5px;
+  float: left;}
+  
+#content ul
+{ margin: 2px 0 22px 0px;}
+
+#content ul li, .sidebar ul li
+{ list-style-type: none;
+  background: url(bullet.png) no-repeat;
+  margin: 0 0 0 0; 
+  padding: 0 0 4px 25px;
+  line-height: 1.5em;}
+
+#footer
+{ width: 100%;
+  font-family: 'trebuchet ms', sans-serif;
+  font-size: 100%;
+  height: 80px;
+  padding: 28px 0 5px 0;
+  text-align: center; 
+  background: transparent url(pattern.png) repeat;
+  border-top: 2px solid #E7746F;
+  color: #FFF;}
+
+#footer p
+{ line-height: 1.7em;
+  padding: 0 0 10px 0;}
+
+#footer a
+{ color: #E7746F;
+  text-decoration: none;}
+
+#footer a:hover
+{ color: #FFF;
+  text-decoration: none;}
+
+.search
+{ color: #5D5D5D; 
+  border: 1px solid #BBB; 
+  width: 134px; 
+  padding: 4px; 
+  font: 100% arial, sans-serif;}
+
+.form_settings
+{ margin: 15px 0 0 0;}
+
+.form_settings p
+{ padding: 0 0 4px 0;}
+
+.form_settings span
+{ float: left; 
+  width: 200px; 
+  text-align: left;}
+  
+.form_settings input, .form_settings textarea
+{ padding: 5px; 
+  width: 299px; 
+  font: 100% arial; 
+  border: 1px solid #E5E5DB; 
+  background: #FFF; 
+  color: #47433F;}
+  
+.form_settings .submit
+{ font: 100% arial; 
+  border: 0; 
+  width: 99px; 
+  margin: 0 0 0 212px; 
+  height: 33px;
+  padding: 2px 0 3px 0;
+  cursor: pointer; 
+  background: #E7746F; 
+  color: #FFF;}
+
+.form_settings textarea, .form_settings select
+{ font: 100% arial; 
+  width: 299px;}
+
+.form_settings select
+{ width: 310px;}
+
+.form_settings .checkbox
+{ margin: 4px 0; 
+  padding: 0; 
+  width: 14px;
+  border: 0;
+  background: none;}
+
+.separator
+{ width: 100%;
+  height: 0;
+  border-top: 1px solid #D9D5CF;
+  border-bottom: 1px solid #FFF;
+  margin: 0 0 20px 0;}
+  
+table
+{ margin: 10px 0 30px 0;}
+
+table tr th, table tr td
+{ background: #E7746F;
+  color: #FFF;
+  padding: 7px 4px;
+  text-align: left;}
+  
+table tr td
+{ background: #E5E5DB;
+  color: #47433F;
+  border-top: 1px solid #FFF;}
+
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Know your <span class="logo_colour">TUMOR</span></a></h1>
+          <h2>We can help you.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="examples.html">Causes and Symptoms</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="banner"></div>
+	  <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            <h3>Latest News</h3>
+            <a href="https://www.medicalnewstoday.com/articles/326635.php"><h4>New blood test detects brain tumors with 87% accuracy</h4></a>
+            <h5>October 11th, 2019</h5>
+            <p>Largely, the poor outlook is due to the fact that brain tumors have very nonspecific symptoms, which makes them more difficult to distinguish ...<br /><a href="https://www.google.com/search?rlz=1C1CHBF_enIN811IN811&sxsrf=ACYBGNSIVL7y9nkdJUJNkcyNSaRAhoRiFQ:1571239986915&q=brain+tumor+news&tbm=nws&source=univ&tbo=u&sa=X&ved=2ahUKEwiroJuKjaHlAhV373MBHWnhBtUQt8YBKAF6BAgDEBI">Read more</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="https://www.mayoclinic.org/diseases-conditions/brain-tumor/symptoms-causes/syc-20350084">Causes</a></li>
+              <li><a href="https://www.medicinenet.com/brain_tumor/article.htm">Signs and symptoms</a></li>
+              <li><a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/the-most-common-brain-tumor-5-things-you-should-know">Awareness and prevention</a></li>
+              <li><a href="https://www.ucsfhealth.org/conditions/brain_tumor/treatment.html">Treatment and surgery</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+              </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Brain Tumor and its grades</h1>
+        <p>A brain tumor is a collection, or mass, of abnormal cells in your brain. Your skull, which encloses your brain, is very rigid. Any growth inside such a restricted space can cause problems. Brain tumors can be cancerous (malignant) or noncancerous (benign). When benign or malignant tumors grow, they can cause the pressure inside your skull to increase. This can cause brain damage, and it can be life-threatening.</p>
+        <p>A staging system is used for most other types of tumors in other parts of the body, to describe where a tumor is located, if or where it has spread, and whether it is affecting other parts of the body. However, there is no recommended systemic staging system for adult brain tumors because most primary tumors do not usually spread beyond the central nervous system. The grading system described below is always used instead because the specific features of a brain tumor determine how cancerous it is and how likely it is to grow.</p>
+        <p>The grade is determined by its features, as seen under a microscope, according to the following criteria:</p>
+        <ul>
+        	<li>Grade I. These tumors are slow growing and unlikely to spread. They can often be cured with surgery.</li>
+        	<li>Grade II. These tumors are less likely to grow and spread but are more likely to come back after treatment.</li>
+        	<li>Grade III. These tumors are more likely to have rapidly dividing cells but no dead cells. They can grow quickly.</li>
+        	<li>Grade IV. In a grade IV tumor, cells in the tumor are actively dividing. In addition, the tumor has blood vessel growth and areas of dead tissue. These tumors can grow and spread quickly.</li>
+        </ul>
+        <p>KYT helps you  providing the grade of your tumor for free.</p>
+        <h2>Take the test</h2> 
+    <form action="/upload" method="post" enctype="multipart/form-data"> 
+		<p><input type="file"  accept="image/*" name="photo" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+		<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+		<p><img id="output" width="200" /></p>
+
+		<script>
+		var loadFile = function(event) {
+		var image = document.getElementById('output');
+		image.src = URL.createObjectURL(event.target.files[0]);
+		};
+		</script>
+    <input type="submit" value="submit">
+    </form>
+		<!-- <div id="tumortrue">
+			<p>Scan completed. We are really sorry to inform you that tumor is<span style="color: red; font-weight: bold;"> positive </span>. Refer our useful link sections for remedies.</p>
+      <p>Accuracy : 0.97</p>
+    </div> 
+		<div id="tumorfalse">
+			<p>Scan completed. We are really glad to inform you that tumor is <span style="color: green; font-weight: bold;">negative</span>. Refer our website for more information and prevention methods.</p>
+      <p>Accuracy : 0.97</p>
+    </div>  -->
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">Causes and Symptoms</a> | <a href="contact.html">Contact Us</a></p>
+      <p>Feel free to check. Fear free to check.</p>
+    </div>
+  </div>
+</body>
+</html>
