@@ -3,7 +3,7 @@
 ## Authors:
 Thalooth Bin Khalid and Shahal KP
 
-## Discription:
+## Description:
 Web application to detect the brain tumor from the uploaded images of brain scan.
 
 ## Technologies used:
